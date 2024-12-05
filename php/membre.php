@@ -85,7 +85,7 @@ if (isset($_GET['id'])) {
         <p class="competences">
             <h2>Compétences :</h2>             
                 <?php foreach ($competences as $competence) : ?>
-                <li><?php echo htmlspecialchars($competence['nom']); ?></li>
+                <span><?php echo htmlspecialchars($competence['nom']); ?></span>
                 <?php endforeach; ?>
         </p>
         </div>
@@ -97,13 +97,8 @@ if (isset($_GET['id'])) {
                 echo nl2br($text); 
             ?>
         </p>
-    </div>
-</section>
-
-    <div class="block_membre">
-        <p class="p_formation">Formation : <?php echo htmlspecialchars($membre['formation']); ?></p>
-    </div>
-    </div>
+    
+    </section>
 
     <script>
         const toggleBtn = document.querySelector('.toggle_btn');
