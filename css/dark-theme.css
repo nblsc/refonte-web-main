@@ -101,6 +101,8 @@ header {
 
 .action_btn:hover {
     scale: 1.05;
+    background-color: orange;
+    color: white
 }
 
 .action_btn:active {
