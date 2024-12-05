@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BTTS - Equipe</title>
+        
+        <link id="theme-link" rel="stylesheet" href="../css/dark-theme.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">        
+    </head>
+    <header>
+   
+        <div class="navbar">
+            <div class="mode"><input type="checkbox" id="toggle" class="checkbox">
+            <label for="toggle" class="label"></label></div>
+            <div class="logo"><a href="index.html">Back to the Stack</a></div>
+            <ul class="liens">
+                <li><a href="../php/recherche.php">🔎</a></li>
+                <li><a href="index.html">Menu Principal</a></li>
+                <li><a href="comptech.html">Compétences Techniques</a></li>
+                <li><a href="méthode.html">Méthode</a></li>
+                <li><a href="anciens clients.html">Expérience</a></li>
+                <li><a href="notreequipe.html">Équipe</a></li>
+            </ul>
+            <a href="../php/signup.php" class="action_btn">Signup</a>
+            <a href="../php/login.php" class="action_btn">Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="../php/recherche.php">🔎</a></li>
+                <li><a href="index.html">Menu Principal</a></li>
+                <li><a href="comptech.html">Compétences Techniques</a></li>
+                <li><a href="méthode.html">Méthode</a></li>
+                <li><a href="anciens clients.html">Expérience</a></li>
+                <li><a href="notreequipe.html">Équipe</a></li>                
+                <li><a href="../php/signup.php" class="action_btn2">Signup</a></li>
+                <li><a href="../php/login.php" class="action_btn2">Login</a></li>
+            </ul>
+            
+        </div>
+    </header>
+    <body class="notre_equipe_body">
+        <h1>Notre Équipe</h1>
+        <div class="container-fluid" id="notre_equipe_page"></div>
+        <div class=container id="notre_equipe_hand"><img src="../images/mainn.png" alt="Main avec des zones cliquables" usemap="#map-1" /></div>
+
+        <map name="map-1">
+            <area shape="circle" coords="53,188,30" href="../php/membre.php?id=1" alt="Page de présentation d'Alizée" />
+            <area shape="circle" coords="104,134,30" href="../php/membre.php?id=2" alt="Page de présentation de Ninon" />
+            <area shape="circle" coords="170,112,30" href="../php/membre.php?id=3" alt="Page de présentation d'Adrien" />
+            <area shape="circle" coords="232,136,30" href="../php/membre.php?id=4" alt="Page de présentation d'Elias" />
+            <area shape="circle" coords="320,257,35" href="../php/membre.php?id=5" alt="Page de présentation d'Anthony" />
+        </map>
+
+        <div class=container id= "notre_equipe_commentaire"><p>Unis comme les 5 doigts de la main !</p></div>
+        <div id= "notre_equipe_instruction"><p>Cliquez sur un doigt pour afficher le profil d'expert correspondant !</p></div>
+        </div>
+
+        <script src="../js/script.js"></script>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.onclick = function() {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+        toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    };
+        </script>
+    </body>
+</html>
